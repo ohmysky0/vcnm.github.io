@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2B6CB0">
+    <meta name="description" content="Профессиональный подход к вакцинации. Мониторинг, статистика и рекомендации от ведущих специалистов.">
+    
+    <title>vaccinuum | Защитите будущее своего ребенка</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Вакцинопрофилактика | Защитите будущее своего ребенка">
+    <meta property="og:description" content="Профессиональный подход к вакцинации. Мониторинг, статистика и рекомендации от ведущих специалистов.">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased bg-gray-50 text-gray-900">
+    <!-- Loader -->
+    <div class="loader" role="progressbar" aria-label="Загрузка сайта">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="loader-circle" cx="50" cy="50" r="40" />
+                <circle class="loader-progress" cx="50" cy="50" r="40" />
+            </svg>
+            <p class="loader-text">Загрузка данных<span class="loader-dots"></span></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-content container">
+            <div class="header-left">
+                <a href="/" class="logo" aria-label="Вакцинопрофилактика">
+                    <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="logo-text">vaccinuum</span>
+                </a>
+
+                <nav class="header-nav" role="navigation">
+                    <button class="mobile-menu-button" aria-expanded="false" aria-controls="main-menu" aria-label="Открыть меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <ul id="main-menu" class="nav-list">
+                        <li><a href="#about" class="nav-link">О нас</a></li>
+                        <li><a href="#simulation" class="nav-link">Симуляция</a></li>
+                        <li><a href="#statistics" class="nav-link">Статистика</a></li>
+                        <li><a href="#team" class="nav-link">Команда</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="datetime-container" role="timer">
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    <time id="datetime" datetime=""></time>
+                </div>
+
+                <div class="theme-toggle">
+                    <button class="theme-switch-btn" id="theme-toggle" aria-label="Переключить тему">
+                        <span class="theme-icon light-icon">
+                            <i class="fas fa-sun" aria-hidden="true"></i>
+                        </span>
+                        <span class="theme-icon dark-icon">
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                        </span>
+                        <span class="toggle-ball"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-progress">
+            <div class="progress-bar" aria-hidden="true"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
+        <div id="particles-js" class="hero-particles" aria-hidden="true"></div>
+        
+        <div class="hero-grid container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-up">
+                    <span class="gradient-text">Вакцинопрофилактика</span>
+                    <span class="hero-subtitle">нового поколения</span>
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="100">
+                    Инвестируйте в здоровое будущее вашего ребенка с помощью современных технологий и профессионального подхода к вакцинации
+                </p>
+
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#about" class="btn btn-primary btn-large">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#simulation" class="btn btn-secondary btn-large">
+                        <span>Запустить симуляцию</span>
+                        <i class="fas fa-play" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
+                <div class="features-wrapper">
+                    <div class="feature-grid">
+                        <!-- Feature Cards -->
+                        <article class="feature-card">
+                            <div class="feature-top">
+                                <div class="small-icon">
+                                    <i class="fas fa-shield-virus" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="feature-title">Надежная защита</h3>
+                                <p class="feature-description">
+                                    Проверенные вакцины от ведущих производителей с полным циклом контроля качества
+                                </p>
+                                <ul class="feature-list" role="list">
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Сертифицированные препараты</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Контроль качества</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Безопасное хранение</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">98%</span>
+                                    <span class="stat-label">Эффективность</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">10M+</span>
+                                    <span class="stat-label">Вакцинаций</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Feature Card 2 -->
+                        <article class="feature-card">
+                            <div class="feature-top">
+                                <div class="small-icon">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="feature-title">Умный мониторинг</h3>
+                                <p class="feature-description">
+                                    Постоянное отслеживание статуса вакцинации с персональными уведомлениями
+                                </p>
+                                <ul class="feature-list" role="list">
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Автоматические напоминания</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Персональный календарь</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>История вакцинаций</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">24/7</span>
+                                    <span class="stat-label">Контроль</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">100%</span>
+                                    <span class="stat-label">Точность</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Feature Card 3 -->
+                        <article class="feature-card">
+                            <div class="feature-top">
+                                <div class="small-icon">
+                                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="feature-title">Доступность</h3>
+                                <p class="feature-description">
+                                    Управляйте графиком вакцинации через удобное мобильное приложение
+                                </p>
+                                <ul class="feature-list" role="list">
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Мобильное приложение</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Простой интерфейс</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                        <span>Быстрый доступ</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">5M+</span>
+                                    <span class="stat-label">Пользователей</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">4.9</span>
+                                    <span class="stat-label">Рейтинг</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p class="scroll-text">Прокрутите для получения информации</p>
+        </div>
+
+        <div class="hero-background" aria-hidden="true">
+            <div class="background-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="info-section" role="region" aria-label="О вакцинации">
+        <div class="info-waves" aria-hidden="true"></div>
+        
+        <div class="container">
+            <header class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Почему вакцинация важна?</h2>
+                <p class="section-subtitle">Научно обоснованный подход к защите здоровья</p>
+            </header>
+
+            <div class="immunity-section">
+                <div class="immunity-cards-grid">
+                    <!-- Immunity Card 1 -->
+                    <article class="immunity-info-card" data-aos="fade-up">
+                        <div class="immunity-card-header">
+                            <div class="immunity-icon">
+                                <i class="fas fa-shield-virus" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="immunity-card-title">Формирование иммунитета</h3>
+                            <p class="immunity-card-description">
+                                Вакцинация помогает организму выработать защиту против опасных инфекций естественным путем
+                            </p>
+                        </div>
+
+                        <div class="immunity-steps-list">
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">01</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Формирование антител</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">02</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Клеточный иммунитет</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">03</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Долгосрочная защита</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="immunity-card-footer">
+                            <div class="effectiveness-tag">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>95% Эффективность</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Immunity Card 2 -->
+                    <article class="immunity-info-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="immunity-card-header">
+                            <div class="immunity-icon">
+                                <i class="fas fa-baby" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="immunity-card-title">Коллективная защита</h3>
+                            <p class="immunity-card-description">
+                                Высокий уровень вакцинации создает защитный барьер для тех, кто не может быть привит
+                            </p>
+                        </div>
+
+                        <div class="immunity-steps-list">
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">01</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Барьерный иммунитет</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">02</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Защита уязвимых</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">03</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Предотвращение вспышек</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="immunity-card-footer">
+                            <div class="effectiveness-tag">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>80% Охват популяции</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Immunity Card 3 -->
+                    <article class="immunity-info-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="immunity-card-header">
+                            <div class="immunity-icon">
+                                <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="immunity-card-title">Профилактика заболеваний</h3>
+                            <p class="immunity-card-description">
+                                Предотвращение развития опасных инфекционных заболеваний и их осложнений
+                            </p>
+                        </div>
+
+                        <div class="immunity-steps-list">
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">01</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Ранняя защита</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">02</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Снижение рисков</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="immunity-step-item">
+                                <div class="step-indicator">
+                                    <span class="step-number">03</span>
+                                    <div class="step-line"></div>
+                                </div>
+                                <div class="step-content">
+                                    <span class="step-text">Предотвращение осложнений</span>
+                                    <div class="step-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="immunity-card-footer">
+                            <div class="effectiveness-tag">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>100% Защита</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulation Section -->
+    <section id="simulation" class="simulation-section" role="region" aria-label="Интерактивная модель распространения">
+        <div class="container">
+            <header class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Моделирование <span class="gradient-text">вакцинации</span></h2>
+                <p class="section-subtitle">Изучите влияние массовой вакцинации на распространение заболеваний</p>
+            </header>
+
+            <div class="simulation-wrapper" data-aos="fade-up">
+                <div class="simulation-card">
+                    <div class="simulation-controls">
+                        <div class="control-panel">
+                            <div class="control-group">
+                                <div class="control-header">
+                                    <label for="vaccination-rate" class="control-label">
+                                        <i class="fas fa-syringe" aria-hidden="true"></i>
+                                        Уровень вакцинации
+                                    </label>
+                                    <output id="rate-value" for="vaccination-rate">50%</output>
+                                </div>
+                                <div class="slider-container">
+                                    <input type="range" 
+                                           id="vaccination-rate" 
+                                           min="0" 
+                                           max="100" 
+                                           value="50" 
+                                           class="range-slider"
+                                           aria-valuemin="0" 
+                                           aria-valuemax="100" 
+                                           aria-valuenow="50">
+                                    <div class="slider-progress" aria-hidden="true"></div>
+                                </div>
+                            </div>
+
+                            <div class="simulation-actions">
+                                <button id="simulation-control" class="btn-action primary">
+                                    <i class="fas fa-play" aria-hidden="true"></i>
+                                    <span>Запустить симуляцию</span>
+                                </button>
+                                <button id="simulation-reset" class="btn-action secondary">
+                                    <i class="fas fa-redo-alt" aria-hidden="true"></i>
+                                    <span>Сбросить</span>
+                                </button>
+                                <div class="speed-control">
+                                    <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                                    <select id="speed-control" aria-label="Скорость симуляции">
+                                        <option value="0.5">0.5×</option>
+                                        <option value="1.0" selected>1.0×</option>
+                                        <option value="2.0">2.0×</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="simulation-view">
+                            <div class="view-container">
+                                <div id="population-grid" class="population-grid" 
+                                     role="grid" 
+                                     aria-label="Сетка популяции">
+                                </div>
+                                <div class="grid-overlay">
+                                    <div class="grid-stats">
+                                        <div class="simulation-stat-badge vaccinated">
+                                            <span id="vaccinated-count">0</span>
+                                            <span class="badge-label">Привито</span>
+                                        </div>
+                                        <div class="simulation-stat-badge infected">
+                                            <span id="infected-count">0</span>
+                                            <span class="badge-label">Заражено</span>
+                                        </div>
+                                        <div class="simulation-stat-badge immune">
+                                            <span id="immune-count">0</span>
+                                            <span class="badge-label">Иммунитет</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simulation-legend" role="list">
+                                <div class="legend-item" data-status="vaccinated" role="listitem">
+                                    <span class="legend-marker"></span>
+                                    <span class="legend-label">Вакцинированные</span>
+                                    <div class="legend-progress">
+                                        <div class="progress-bar vaccinated"></div>
+                                    </div>
+                                </div>
+                                <div class="legend-item" data-status="infected" role="listitem">
+                                    <span class="legend-marker"></span>
+                                    <span class="legend-label">Инфицированные</span>
+                                    <div class="legend-progress">
+                                        <div class="progress-bar infected"></div>
+                                    </div>
+                                </div>
+                                <div class="legend-item" data-status="immune" role="listitem">
+                                    <span class="legend-marker"></span>
+                                    <span class="legend-label">С иммунитетом</span>
+                                    <div class="legend-progress">
+                                        <div class="progress-bar immune"></div>
+                                    </div>
+                                </div>
+                                <div class="legend-item" data-status="susceptible" role="listitem">
+                                    <span class="legend-marker"></span>
+                                    <span class="legend-label">Уязвимые</span>
+                                    <div class="legend-progress">
+                                        <div class="progress-bar susceptible"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="simulation-info">
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-shield-virus" aria-hidden="true"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Коллективный иммунитет</h3>
+                                    <p>Достигается при вакцинации >80% населения</p>
+                                </div>
+                                <div class="info-progress">
+                                    <svg viewBox="0 0 36 36" class="circular-progress" aria-hidden="true">
+                                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    </svg>
+                                    <span class="progress-value">80%</span>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Эффективность вакцины</h3>
+                                    <p>Защита от тяжелого течения болезни</p>
+                                </div>
+                                <div class="info-progress">
+                                    <svg viewBox="0 0 36 36" class="circular-progress" aria-hidden="true">
+                                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    </svg>
+                                    <span class="progress-value">95%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics-section" role="region" aria-label="Статистика вакцинации">
+        <div class="container">
+            <header class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Статистика вакцинации</h2>
+                <p class="section-subtitle">Актуальные данные по вакцинации в России и мире</p>
+            </header>
+
+            <div class="statistics-grid">
+                <!-- Russia Statistics Card -->
+                <div class="stat-card" data-aos="fade-right">
+                    <header class="stat-card-header">
+                        <h3>Охват вакцинации в России</h3>
+                        <div class="view-toggle" role="tablist">
+                            <button class="view-button active" 
+                                    role="tab" 
+                                    aria-selected="true" 
+                                    aria-controls="yearly-stats"
+                                    data-view="yearly">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span>Год</span>
+                            </button>
+                            <button class="view-button" 
+                                    role="tab" 
+                                    aria-selected="false" 
+                                    aria-controls="monthly-stats"
+                                    data-view="monthly">
+                                <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                                <span>Месяц</span>
+                            </button>
+                        </div>
+                    </header>
+
+                    <div class="chart-container" role="tabpanel" id="yearly-stats">
+                        <canvas id="russia-chart" aria-label="График вакцинации в России"></canvas>
+                        
+                    </div>
+
+                    <div class="stat-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-percentage" aria-hidden="true"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Текущий охват</span>
+                                <span class="detail-value">89%</span>
+                                <div class="detail-trend positive">
+                                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                                    <span>+4%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-user-shield" aria-hidden="true"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Вакцинировано</span>
+                                <span class="detail-value">130.5M</span>
+                                <div class="detail-trend positive">
+                                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                                    <span>+2.3M</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- World Statistics Card -->
+                <div class="stat-card" data-aos="fade-left">
+                    <header class="stat-card-header">
+                        <h3>Мировая статистика</h3>
+                        <div class="region-select">
+                            <select id="world-region" aria-label="Выбрать регион">
+                                <option value="global">Весь мир</option>
+                                <option value="europe">Европа</option>
+                                <option value="asia">Азия</option>
+                                <option value="namerica">Северная Америка</option>
+                                <option value="samerica">Южная Америка</option>
+                                <option value="africa">Африка</option>
+                                <option value="oceania">Океания</option>
+                            </select>
+                        </div>
+                    </header>
+
+                    <div class="chart-container">
+                        <canvas id="world-chart" aria-label="График мировой статистики вакцинации"></canvas>
+                    </div>
+
+                    <div class="stat-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Мировой охват</span>
+                                <span class="detail-value">82%</span>
+                                <div class="detail-trend positive">
+                                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                                    <span>+5%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Всего вакцинировано</span>
+                                <span class="detail-value">6.2B</span>
+                                <div class="detail-trend positive">
+                                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                                    <span>+12%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section" role="region" aria-label="Вакцина Трекер">
+        <div class="container">
+            <div class="product-content" data-aos="fade-up">
+                <div class="product-info">
+                    <header class="product-header">
+                        <h2 class="product-title">Вакцина Трекер</h2>
+                        <p class="product-tagline">Инновационное приложение для мониторинга вакцинации</p>
+                    </header>
+                    <div class="features-list" role="list">
+                        <div class="feature-item" role="listitem">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Умное планирование</h3>
+                                <p>Автоматическое составление графика прививок с уведомлениями и напоминаниями</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" role="listitem">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-medical"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Электронный дневник</h3>
+                                <p>Подробная история вакцинации с отслеживанием всех показателей</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" role="listitem">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Консультации онлайн</h3>
+                                <p>Прямая связь с врачами-специалистами в любое время</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" role="listitem">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Аналитика</h3>
+                                <p>Персональная статистика и рекомендации по вакцинации</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="/imm/index.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Начать пользоваться</span>
+                        </a>
+                        <button class="btn btn-outline btn-large" data-modal="demo">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Смотреть демо</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="phone-mockup" data-aos="fade-left">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="vaccine-info-slider">
+                                <!-- Слайд 1: График вакцинации -->
+                                <div class="info-slide active">
+                                    <div class="slide-header">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <h3>График вакцинации</h3>
+                                    </div>
+                                    <div class="vaccine-timeline">
+                                        <div class="timeline-item">
+                                            <span class="age">0-12 мес</span>
+                                            <div class="vaccine-details">
+                                                <h4>Ближайшие прививки</h4>
+                                                <ul>
+                                                    <li>БЦЖ (при рождении)</li>
+                                                    <li>Гепатит B (0-1-6 мес)</li>
+                                                    <li>АКДС + Полиомиелит (3-4,5-6 мес)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <span class="age">12-24 мес</span>
+                                            <div class="vaccine-details">
+                                                <h4>Запланированные прививки</h4>
+                                                <ul>
+                                                    <li>Корь, краснуха, паротит (12 мес)</li>
+                                                    <li>Ревакцинация АКДС (18 мес)</li>
+                                                    <li>Ревакцинация полиомиелита (18 мес)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Слайд 2: Важность вакцинации -->
+                                <div class="info-slide">
+                                    <div class="slide-header">
+                                        <i class="fas fa-shield-virus"></i>
+                                        <h3>Почему это важно?</h3>
+                                    </div>
+                                    <div class="benefits-content">
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-heartbeat"></i>
+                                            </div>
+                                            <div class="benefit-text">
+                                                <h4>Защита от болезней</h4>
+                                                <p>Предотвращение опасных инфекционных заболеваний</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="benefit-text">
+                                                <h4>Коллективный иммунитет</h4>
+                                                <p>Защита тех, кто не может получить вакцину</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-chart-line"></i>
+                                            </div>
+                                            <div class="benefit-text">
+                                                <h4>Долгосрочная защита</h4>
+                                                <p>Формирование стойкого иммунитета</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Слайд 3: Статистика -->
+                                <div class="info-slide">
+                                    <div class="slide-header">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <h3>Статистика и факты</h3>
+                                    </div>
+                                    <div class="facts-content">
+                                        <div class="fact-card">
+                                            <span class="fact-number">98%</span>
+                                            <p>Эффективность в предотвращении заболеваний</p>
+                                        </div>
+                                        <div class="fact-card">
+                                            <span class="fact-number">2-3M</span>
+                                            <p>Жизней спасается ежегодно благодаря вакцинации</p>
+                                        </div>
+                                        <div class="fact-card">
+                                            <span class="fact-number">80%</span>
+                                            <p>Снижение риска тяжелых осложнений</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Индикаторы слайдов -->
+                            <div class="slide-indicators" role="tablist">
+                                <button class="indicator active" data-slide="0" role="tab" aria-selected="true"></button>
+                                <button class="indicator" data-slide="1" role="tab" aria-selected="false"></button>
+                                <button class="indicator" data-slide="2" role="tab" aria-selected="false"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Team Section -->
+    <section id="team" class="team-section" role="region" aria-label="Наша команда">
+        <div class="container">
+            <header class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Наши специалисты</h2>
+                <p class="section-subtitle">Команда профессионалов с многолетним опытом</p>
+            </header>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <article class="team-member" data-aos="fade-up">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-container">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <div class="avatar-overlay"></div>
+                            </div>
+                            <div class="member-status away" aria-label="Не в сети"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Дёндёши Давид</h3>
+                            <p class="member-position">CEO & Lead Dev</p>
+                            <div class="member-titles">
+                                
+                                <span class="title-badge">Педиатр</span>
+                            </div>
+                            <p class="member-credentials">
+                                Cтратегический лидер и ведущий разработчик всех технических решений
+                            </p>
+                            <div class="member-achievements">
+                                <span class="achievement-badge" title="Сертифицированный разработчик">
+                                    <i class="fas fa-certificate" aria-hidden="true"></i>
+                                </span>
+                                
+                                <span class="achievement-badge" title="Международный опыт">
+                                    <i class="fas fa-globe" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="member-contact">
+                            <button class="contact-button" aria-label="Написать сообщение">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Запланировать встречу">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 2 -->
+                <article class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-container">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <div class="avatar-overlay"></div>
+                            </div>
+                            <div class="member-status online" aria-label="В сети"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Зорин Игорь Владимирович</h3>
+                            <p class="member-position">Профессор, COO</p>
+                            <div class="member-titles">
+                                <span class="title-badge">д.м.н.</span>
+                                <span class="title-badge">Нефролог</span>
+                            </div>
+                            <p class="member-credentials">
+                                Руководитель операционной деятельности и ключевой консультант по вопросам управления и стратегического развития
+                            </p>
+                            <div class="member-achievements">
+                                <span class="achievement-badge" title="Научные публикации">
+                                    <i class="fas fa-book" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Международные конференции">
+                                    <i class="fas fa-microphone" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Научные награды">
+                                    <i class="fas fa-medal" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="member-contact">
+                            <button class="contact-button" aria-label="Написать сообщение">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Запланировать консультацию">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Научные работы">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 3 -->
+                <article class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-container">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <div class="avatar-overlay"></div>
+                            </div>
+                            <div class="member-status online" aria-label="В сети"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Прасковский Даниил Денисович</h3>
+                            <p class="member-position">Head of QA</p>
+                            <div class="member-titles">
+                                
+                                <span class="title-badge">Педиатр</span>
+                            </div>
+                            <p class="member-credentials">
+                                Руководитель отдела обеспечения качества, ответственный за тестирование и стабильность продукта
+                            </p>
+                            <div class="member-achievements">
+                                <span class="achievement-badge" title="Сертификации QA">
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Автоматизация тестирования">
+                                    <i class="fas fa-robot" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Управление качеством">
+                                    <i class="fas fa-tasks" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="member-contact">
+                            <button class="contact-button" aria-label="Написать сообщение">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Запланировать встречу">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                        
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 4 -->
+                <article class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-container">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <div class="avatar-overlay"></div>
+                            </div>
+                            <div class="member-status away" aria-label="Нет на месте"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Карымова Гузель Корганбековна</h3>
+                            <p class="member-position">Head of Intellectual Property</p>
+                            <div class="member-titles">
+                                <span class="title-badge">к.м.н</span>
+                                <span class="title-badge">Педиатр</span>
+                            </div>
+                            <p class="member-credentials">
+                                Руководитель отдела интеллектуальной собственности и консультант по педиатрии, отвечающая за защиту инноваций и научные разработки.
+                            </p>
+                            <div class="member-achievements">
+                                <span class="achievement-badge" title="Научные патенты">
+                                    <i class="fa-solid fa-file-waveform" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Международные публикации">
+                                    <i class="fas fa-book-medical" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Педиатрическая практика">
+                                    <i class="fas fa-baby" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="member-contact">
+                            <button class="contact-button" aria-label="Написать сообщение">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Запланировать консультацию">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Научные публикации">
+                                <i class="fas fa-scroll" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 5 -->
+                <article class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-container">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <div class="avatar-overlay"></div>
+                            </div>
+                            <div class="member-status online" aria-label="В сети"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Бикметов Тимур Ильсурович</h3>
+                            <p class="member-position">Head of Medical Consulting</p>
+                            <div class="member-titles">
+                                <span class="title-badge">Нефролог</span>
+                                <span class="title-badge">Педиатр</span>
+                            </div>
+                            <p class="member-credentials">
+                                Медицинский консультант и специалист по нефрологии, обеспечивающий экспертное сопровождение в области медицины.
+                            </p>
+                            <div class="member-achievements">
+                                <span class="achievement-badge" title="Клиническая практика">
+                                    <i class="fas fa-clinic-medical" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Медицинские исследования">
+                                    <i class="fas fa-microscope" aria-hidden="true"></i>
+                                </span>
+                                <span class="achievement-badge" title="Международные сертификации">
+                                    <i class="fas fa-certificate" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="member-contact">
+                            <button class="contact-button" aria-label="Написать сообщение">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Запланировать консультацию">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                            <button class="contact-button" aria-label="Медицинский профиль">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <span class="tooltip"></span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer start -->
+    <!-- Компактный футер -->
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <!-- Main Footer Grid -->
+        <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-col">
+                <a href="/" class="footer-logo">
+                    
+                    <span>vaccinuum</span>
+                </a>
+                <p class="footer-description">
+                    Профессиональный подход к вакцинации с использованием современных технологий.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4 class="footer-title">О нас</h4>
+                <ul class="footer-links">
+                    <li><a href="/docs/ru/company.html">О компании</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                    <li><a href="#licenses">Лицензии</a></li>
+                    <li><a href="#partners">Партнеры</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#blog">Блог</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4 class="footer-title">Услуги</h4>
+                <ul class="footer-links">
+                    <li><a href="#vaccination">Вакцинация</a></li>
+                    <li><a href="#online">Онлайн консультации</a></li>
+                    <li><a href="#monitoring">Мониторинг здоровья</a></li>
+                    <li><a href="#calendar">Календарь прививок</a></li>
+                    <li><a href="#support">Поддержка 24/7</a></li>
+                    <li><a href="#education">Обучение</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h4 class="footer-title">Контактная информация</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Оренбург, ул. Советская, д. 123</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:88005553535">8 (800) 555-35-35</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@vaccine-prevention.ru">info@vaccine-prevention.ru</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <div class="work-hours">
+                            <span>Пн-Пт: 9:00 - 20:00</span>
+                            <span>Сб-Вс: 10:00 - 18:00</span>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    
+                    <div class="social-icons">
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Divider -->
+        <hr class="footer-divider">
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <span class="copyright">© 2025 vaccinuum. Все права защищены.</span>
+                <nav class="legal-links">
+                    <a href="/docs/ru/tos.html">Условия использования</a>
+                    <a href="/docs/ru/privacy.html">Политика конфиденциальности</a>
+                    <a href="/docs/ru/cookies.html">Cookies</a>
+                    <a href="/docs/ru/map.html">Карта сайта</a>
+                </nav>
+            </div>            
+        </div>
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+
+    <!-- footer end-->
+
+    <!-- Enhanced Modals -->
+    <!-- Video Demo Modal -->
+    <div class="modal-container" id="videoModal" role="dialog" aria-hidden="true" aria-labelledby="modal-title">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Закрыть">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="modal-body">
+                <h3 id="modal-title">Демонстрация возможностей</h3>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle" aria-hidden="true"></i>
+                        <span>Демо видео</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal-container" id="bookingModal" role="dialog" aria-hidden="true" aria-labelledby="booking-title">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Закрыть">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="modal-body">
+                <h3 id="booking-title">Запись на консультацию</h3>
+                <form class="booking-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="booking-name">Ваше имя</label>
+                            <input type="text" id="booking-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-phone">Телефон</label>
+                            <input type="tel" id="booking-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-date">Дата</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-time">Время</label>
+                            <input type="time" id="booking-time" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="booking-comment">Комментарий</label>
+                            <textarea id="booking-comment" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                            <span>Записаться</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="modal-container" id="infoModal" role="dialog" aria-hidden="true" aria-labelledby="info-title">
+        <div class="modal-overlay" aria-hidden="true"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Закрыть">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="modal-body">
+                <h3 id="info-title">Дополнительная информация</h3>
+                <div class="info-content">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Cookie Consent Banner -->
+<div class="cookie-consent" role="alert" aria-label="Согласие на использование cookies">
+    <div class="cookie-consent__content">
+        <p class="cookie-consent__text">
+            Мы используем cookies для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с
+            <a href="#privacy" class="cookie-consent__link">политикой использования cookies</a>.
+        </p>
+        <div class="cookie-consent__actions">
+            <button class="cookie-consent__btn cookie-consent__btn--accept" id="accept-cookies">
+                Принять все
+            </button>
+            <button class="cookie-consent__btn cookie-consent__btn--customize" id="customize-cookies">
+                Настроить
+            </button>
+        </div>
+    </div>
+ </div>
+ 
+ <!-- Cookie Settings Modal -->
+ <div class="cookie-modal" id="cookieSettingsModal" aria-hidden="true">
+    <div class="cookie-modal__overlay"></div>
+    <div class="cookie-modal__content">
+        <h3>Настройка cookies</h3>
+        <button class="cookie-modal__close" aria-label="Закрыть">×</button>
+        <div class="cookie-modal__body">
+            <!-- Cookie settings options will go here -->
+        </div>
+    </div>
+ </div>
+
+    <!-- Notifications Container -->
+    <div class="notifications-container" role="log" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
