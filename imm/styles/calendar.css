@@ -1,0 +1,193 @@
+/* Стили для календаря */
+.calendar-container {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.calendar-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.mini-calendar {
+    flex: 0 0 300px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.calendar-day:hover {
+    background-color: var(--primary-light);
+    color: var(--surface-color);
+}
+
+.calendar-day.weekday {
+    font-weight: bold;
+    background-color: var(--primary-light);
+    color: var(--surface-color);
+}
+
+.calendar-day.empty {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+.calendar-day.today {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    font-weight: bold;
+}
+
+.event-indicator {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.calendar-events {
+    flex: 1;
+}
+
+.calendar-events h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.events-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.event-item:hover {
+    background-color: var(--primary-light);
+    color: var(--surface-color);
+}
+
+.event-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    min-width: 60px;
+}
+
+.event-details {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.event-title {
+    font-weight: 500;
+}
+
+.event-status,
+.event-result {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.event-item.vaccine {
+    border-left: 4px solid var(--primary-color);
+}
+
+.event-item.tuberculin {
+    border-left: 4px solid var(--secondary-color);
+}
+
+.event-item.custom {
+    border-left: 4px solid var(--success-color);
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-icon:hover {
+    color: var(--primary-color);
+}
+
+.no-events {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Стили для модального окна событий дня */
+.modal .events-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.modal .event-item {
+    margin-bottom: 10px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .calendar-wrapper {
+        flex-direction: column;
+    }
+
+    .mini-calendar {
+        flex: none;
+        width: 100%;
+    }
+
+    .calendar-day {
+        font-size: 0.7rem;
+    }
+
+    .event-indicator {
+        width: 3px;
+        height: 3px;
+    }
+}

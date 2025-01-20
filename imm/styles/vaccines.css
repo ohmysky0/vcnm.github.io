@@ -1,0 +1,144 @@
+/* Добавьте эти стили в конец файла dashboard.css */
+
+.vaccines-container {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.vaccines-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.vaccines-header h2 {
+    font-family: 'Libre Franklin';
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.search-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input,
+.filter-select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.search-input {
+    flex-grow: 1;
+}
+
+.vaccines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.vaccine-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.vaccine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vaccine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.vaccine-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.vaccine-status {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.status-completed {
+    background-color: var(--success-color);
+    color: var(--surface-color);
+}
+
+.status-pending {
+    background-color: var(--warning-color);
+    color: var(--surface-color);
+}
+
+.vaccine-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.vaccine-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.btn-icon:hover {
+    color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.vaccine-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .vaccines-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vaccines-header .btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .search-filter {
+        flex-direction: column;
+    }
+
+    .vaccines-grid {
+        grid-template-columns: 1fr;
+    }
+}
